@@ -34,6 +34,9 @@ Vue.use(vClickOutside)
 ```js
 <script>
   export default {
+    data: {
+      isDropdownOpen: false
+    },
     methods: {
       onClickOutside (event) {
         console.log('Clicked outside. Event: ', event)
@@ -43,7 +46,7 @@ Vue.use(vClickOutside)
 </script>
 
 <template>
-  <div v-click-outside="onClickOutside"></div>
+  <div v-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
 </template>
 ```
 
