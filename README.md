@@ -54,6 +54,9 @@ import vClickOutside from 'v-click-outside'
 
 <script>
   export default {
+    data: {
+      isDropdownOpen: false
+    },
     directives: {
       clickOutside: vClickOutside.directive
     },
@@ -66,7 +69,7 @@ import vClickOutside from 'v-click-outside'
 </script>
 
 <template>
-  <div v-click-outside="onClickOutside"></div>
+  <div v-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
 </template>
 ```
 
