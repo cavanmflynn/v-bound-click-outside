@@ -1,8 +1,8 @@
 {
-  "name": "v-click-outside",
-  "version": "1.0.5",
-  "description": "Vue directive to react on clicks outside an element",
-  "main": "dist/v-click-outside.min.js",
+  "name": "v-bound-click-outside",
+  "version": "0.1.0",
+  "description": "Vue directive to react on clicks outside an element.",
+  "main": "dist/v-bound-click-outside.min.js",
   "scripts": {
     "test": "jest --coverage",
     "cover": "open coverage/lcov-report/index.html",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ndelvalle/v-click-outside.git"
+    "url": "git+https://github.com/cavanmflynn/v-bound-click-outside.git"
   },
-  "author": "ndelvalle <nicolas.delvalle@gmail.com>",
+  "author": "Cavan Flynn <cavan.m.flynn@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ndelvalle/v-click-outside/issues"
+    "url": "https://github.com/cavanflynn/v-bound-click-outside/issues"
   },
-  "homepage": "https://github.com/ndelvalle/v-click-outside#readme",
+  "homepage": "https://github.com/cavanflynn/v-bound-click-outside#readme",
   "devDependencies": {
     "babel-jest": "^21.2.0",
     "babel-preset-es2015-rollup": "^3.0.0",

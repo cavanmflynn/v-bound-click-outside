@@ -1,24 +1,19 @@
-# v-click-outside
+# v-bound-click-outside
 
-[![Codeship Status for ndelvalle/v-click-outside](https://app.codeship.com/projects/f8c6e5c0-030c-0135-37dc-52cd8f2ce308/status?branch=master)](https://app.codeship.com/projects/213256)
-[![Coverage Status](https://coveralls.io/repos/github/ndelvalle/v-click-outside/badge.svg?branch=master)](https://coveralls.io/github/ndelvalle/v-click-outside?branch=master)
-[![dependencies Status](https://david-dm.org/ndelvalle/v-click-outside/status.svg)](https://david-dm.org/ndelvalle/v-click-outside)
-[![devDependencies Status](https://david-dm.org/ndelvalle/v-click-outside/dev-status.svg)](https://david-dm.org/ndelvalle/v-click-outside?type=dev)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5ca72a2dd2044278918b45ea1eba122e)](https://www.codacy.com/app/ndelvalle/v-click-outside?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ndelvalle/v-click-outside&amp;utm_campaign=Badge_Grade)
+Vue directive to react on clicks outside an element without stopping the event propagation. Great for closing dialogues, menus among other things. 
 
-
-Vue directive to react on clicks outside an element without stopping the event propagation. Great for closing dialogues, menus among other things.
+Fork of [ndelvalle/v-bound-click-outside](https://github.com/ndelvalle/v-bound-click-outside) that only calls the passed function when `isBound` is true. Perfect for preventing function calls when a dropdown is closed.
 
 
 
 ## Install
 
 ```bash
-$ npm install --save v-click-outside
+$ npm install --save v-bound-click-outside
 ```
 
 ```bash
-$ yarn add v-click-outside
+$ yarn add v-bound-click-outside
 ```
 
 
@@ -26,7 +21,7 @@ $ yarn add v-click-outside
 
 ```js
 import Vue from 'vue'
-import vClickOutside from 'v-click-outside'
+import vClickOutside from 'v-bound-click-outside'
 
 Vue.use(vClickOutside)
 ```
@@ -46,14 +41,14 @@ Vue.use(vClickOutside)
 </script>
 
 <template>
-  <div v-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
+  <div v-bound-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
 </template>
 ```
 
 Or use it as a directive
 
 ```js
-import vClickOutside from 'v-click-outside'
+import vClickOutside from 'v-bound-click-outside'
 
 <script>
   export default {
@@ -72,7 +67,7 @@ import vClickOutside from 'v-click-outside'
 </script>
 
 <template>
-  <div v-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
+  <div v-bound-click-outside="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
 </template>
 ```
 
@@ -80,12 +75,12 @@ On touch devices, the plugin adds 'touchstart' and 'click' event listeners to su
 
 ```js
 <template>
-  <div v-click-outside.notouch="onClickOutside"></div>
+  <div v-bound-click-outside.notouch="{ isBound: isDropdownOpen, function: onClickOutside }"></div>
 </template>
 ```
 
 ## License
-[MIT License](https://github.com/ndelvalle/v-click-outside/blob/master/LICENSE)
+[MIT License](https://github.com/cavanmflynn/v-bound-click-outside/blob/master/LICENSE)
 
 ## Style
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

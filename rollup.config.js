@@ -15,11 +15,11 @@ const banner = `/**
 export default {
   input: 'lib/index.js',
   output: {
-    file: 'dist/v-click-outside.min.js',
+    file: 'dist/v-bound-click-outside.min.js',
     format: 'umd'
   },
-  moduleId: 'v-click-outside',
-  name: 'v-click-outside',
+  moduleId: 'v-bound-click-outside',
+  name: 'v-bound-click-outside',
   banner,
   plugins: [
     resolve({
